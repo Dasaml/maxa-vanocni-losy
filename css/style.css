@@ -1,0 +1,614 @@
+@font-face {
+	font-family: "Maxa Grotesk";
+	src: url("../fonts/Maxa-Grotesk-Regular.woff2") format("woff2");
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: "Maxa Grotesk";
+	src: url("../fonts/Maxa-Grotesk-SemiBold.woff2") format("woff2");
+	font-weight: 600;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: "Maxa Grotesk";
+	src: url("../fonts/Maxa-Grotesk-Bold.woff2") format("woff2");
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+}
+@keyframes snehulak-houpani {
+  0%, 100% {
+    transform: rotate(0deg) translateY(0);
+  }
+  25% {
+    transform: rotate(-4deg) translateY(-3px); /* Náklon vlevo a mírný vznos */
+  }
+  75% {
+    transform: rotate(4deg) translateY(-2px);  /* Náklon vpravo */
+  }
+}
+html {
+	scroll-behavior: smooth;
+	overflow-x:hidden;
+}
+body.maxa-christmas {
+	display: block;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	font-family: "Maxa Grotesk", Arial, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-size: 16px;
+	font-weight: 400;
+	font-style: normal;
+	line-height: 23px;
+	color: #000;
+	background-color: #ffffff;
+	background-attachment: scroll;
+	background-size: 100% 100%;
+	min-height: 100vh;
+	overflow: hidden;
+}
+.maxa-christmas h1 {
+	color: #6000bf;
+	text-align: center;
+	font-size: 2.4rem;
+	font-weight: 400;
+	line-height: 1.1;
+	padding: 0 10px;
+	margin: 0;
+}
+.maxa-christmas h2 {
+	font-size: 1.5rem;
+	font-weight: 400;
+	line-height: 1.2;
+	margin: 0;
+}
+.maxa-christmas .h2-tilte.text-left {
+	text-align: left;
+}
+.maxa-christmas .h2-tilte.text-center {
+	text-align: center;
+}
+.maxa-christmas .h2-tilte {
+	padding: 2em 0;
+}
+.maxa-christmas .h2-tilte.lottery-tickets {
+	padding: 0 0 2em;
+}
+.maxa-christmas p {
+	color: #fff;
+	font-size: 1rem;
+	font-weight: 500;
+	line-height: 1.6;
+	margin: 1em 0;
+}
+.maxa-christmas .text-smaller {
+	font-size: 1rem;
+}
+.maxa-christmas .title {
+	color: #000;
+	font-size: 1.3rem;
+	font-weight: 600;
+	line-height: 1.2;
+	text-align: left;
+	text-transform: uppercase;
+	margin: 0;
+}
+.maxa-christmas .subtitle {
+	color: #6000bf;
+	font-size: 1rem;
+	font-weight: 600;
+	line-height: 1.4;
+	text-transform: uppercase;
+	margin: 0;
+}
+.maxa-christmas .bg-violet {
+	background-color: #6000bf;
+}
+.maxa-christmas .bg-white {
+	background-color: #ffffff;
+}
+.maxa-christmas .bg-orange {
+	background-color: #ffb233;
+}
+.maxa-christmas .bg-gold {
+	background-color: #a77800;
+}
+.maxa-christmas .gold-color {
+	color: #fbd76e;
+}
+.maxa-christmas .teal-color {
+	color: #00cccc;
+}
+.maxa-christmas .orange-color {
+	color: #ffb233;
+}
+.maxa-christmas .violet-color {
+	color: #6000bf;
+}
+.maxa-christmas .color-white {
+	color: #ffffff;
+}
+.maxa-christmas .color-black {
+	color: #000;
+}
+.maxa-christmas .content {
+	font-size: 1rem;
+	text-align: left;
+	color: #000;
+}
+.maxa-christmas a {
+	text-decoration: none;
+	outline: none;
+}
+.maxa-christmas .boxes-img {
+	padding: 0;
+	height: auto;
+	width: 100%;
+	max-width: 400px;
+}
+.maxa-christmas .container {
+	max-width: 100%;
+	margin: 0 auto;
+}
+.maxa-christmas .logo-inner {
+	padding: 2em 0;
+	text-align: center;
+}
+.maxa-christmas .bg-section-1 {
+	background-image: url("../img/sediva-bg.webp");
+	background-color: #6000bf;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+.maxa-christmas .bg-section-2 {
+	background-image: url("../img/sediva-bg.webp");
+	background-color: #ffffff;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	padding: 0 0 2em;
+}
+.maxa-christmas .bg-section-3 {
+	background-image: url("../img/sediva-bg.webp");
+	background-color: #ffffff;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	padding: 0 1em 1em;
+}
+.maxa-christmas .bg-section-4 {
+	background-image: url("../img/sediva-bg.webp");
+	background-color: #ffffff;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	padding: 0 1em 1em;
+}
+.maxa-christmas .top-banner {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 1em;
+}
+.maxa-christmas .top-banner-title {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.maxa-christmas .top-banner-title img {
+	width: 100%;
+	max-width: 600px;
+	height: auto;
+}
+.maxa-christmas .bg-section-1 h2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    color: #fbd76e;
+	line-height: 1.1;
+	font-size: 1.4rem;
+}
+.maxa-christmas .bg-section-1 h2::before {
+	content: "";
+	display: inline-block;
+	width: 150px;
+	height: 20px;
+	background-image: url(../img/title-line-gold-left.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	vertical-align: middle;
+}
+.maxa-christmas .bg-section-1 h2::after {
+	content: "";
+	display: inline-block;
+	width: 150px;
+	height: 20px;
+	background-image: url(../img/title-line-gold-right.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	vertical-align: middle;
+}
+.maxa-christmas .bg-section-3 h2 {
+	color: #000;
+	line-height: 1.1;
+	font-size: 1.4rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+}
+.maxa-christmas .bg-section-3 h2::after {
+	content: "";
+	display: inline-block;
+	width: 150px;
+	height: 20px;
+	background-image: url(../img/title-line-black-left.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	vertical-align: middle;
+}
+.maxa-christmas .bg-section-4 h2 {
+	display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+	color: #ffb233;
+	font-size: 3rem;
+	font-weight: 700;
+	line-height: 1.2;
+	margin: 0;
+}
+.maxa-christmas .bg-section-4 h2::before {
+	content: "";
+	display: inline-block;
+	width: 150px;
+	height: 20px;
+	background-image: url(../img/title-line-gold-left.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	vertical-align: middle;
+}
+.maxa-christmas .bg-section-4 h2::after {
+	content: "";
+	display: inline-block;
+	width: 150px;
+	height: 20px;
+	background-image: url(../img/title-line-gold-right.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	vertical-align: middle;
+}
+.maxa-christmas .boxes.first {
+	padding: 0;
+}
+.maxa-christmas .boxes.second {
+	padding: 3em 0 2em;
+}
+.maxa-christmas .boxes {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	gap: 10px;
+} 
+.maxa-christmas .boxes .col {
+	position: relative;
+	padding: 0 0 .5em;
+	text-align: center;
+	width: 100%;
+}
+.maxa-christmas .btn-wrapper {
+	text-align: center;
+	margin-top: 2em;
+}
+.maxa-christmas .btn-wrapper .christmas-button {
+	display: inline-block;
+	position: relative;
+	background-color: #6000bf;
+	color: #ffb233;
+	border-width: 0;
+	padding: 0.7em 1.5em;
+	font-size: 1rem;
+	font-weight: 600;
+	text-transform: uppercase;
+	text-decoration: none;
+	cursor: pointer;
+	opacity: 1;
+	border-radius: 38px;
+	-webkit-transition: all .3s ease-in-out;
+	-o-transition: all .3s ease-in-out;
+	transition: all .3s ease-in-out;
+}
+.maxa-christmas .btn-wrapper .christmas-button:hover {
+	background-color: #ffb233e6;
+	color: #6000bf;
+}
+
+.maxa-christmas .btn-wrapper .christmas-button-otherwise {
+	display: inline-block;
+	position: relative;
+	background-color: #ffb233;
+	color: #5300a5;
+	border-width: 0;
+	padding: 0.7em 1.5em;
+	font-size: 1rem;
+	font-weight: 600;
+	text-transform: uppercase;
+	text-decoration: none;
+	cursor: pointer;
+	opacity: 1;
+	border-radius: 38px;
+	-webkit-transition: all .3s ease-in-out;
+	-o-transition: all .3s ease-in-out;
+	transition: all .3s ease-in-out;
+}
+
+.maxa-christmas .btn-wrapper .christmas-button-otherwise:hover {
+	background-color: #5300a5;
+	color: #ffb233;
+}
+.maxa-christmas .christmas-link {
+	display: block;
+	color: #fff;
+	text-decoration: none;
+	cursor: pointer;
+	-webkit-transition: all 222ms ease-out;
+	-o-transition: all 222ms ease-out;
+	transition: all 222ms ease-out;
+}
+.maxa-christmas .christmas-link:hover {
+	-webkit-transform: scale(1.04);
+	-ms-transform: scale(1.04);
+	transform: scale(1.04);
+}
+.maxa-christmas .warning {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 1em;
+}
+.maxa-christmas .boxes.second .col2 {
+	text-align: center;
+}
+.maxa-christmas .boxes.first .col1 {
+	text-align: center;
+}
+.maxa-christmas .boxes.second .col1 {
+	position: relative;
+}
+.maxa-christmas .boxes.second .col1:after {
+	content: "";
+	display: inline-block;
+	width: 200px;
+	height: 300px;
+	background-image: url(../img/snehulak.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: bottom right;
+	position: absolute;
+	right: -170px;
+    bottom: -100px;
+	transform-origin: bottom center;
+	animation: snehulak-houpani 4s ease-in-out infinite;
+}
+
+.maxa-christmas .boxes .col-2 {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.maxa-christmas .under-boxes-content {
+	padding: 3em 0 0;
+}
+.maxa-christmas .under-boxes-content p {
+	color: #000;
+	font-size: 1.8rem;
+	font-weight: 600;
+	text-align: center;
+	line-height: 1.1;
+	margin: 0;
+	padding: 0;
+}
+.maxa-christmas .warning-img-mobile {
+	display: block;
+	height: auto;
+	width: 100%;
+	font-size: 13px;
+	color: #ffffff;
+	text-align: center;
+	line-height: 1.1;
+}
+.maxa-christmas .footer-top-inner {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	width: auto;
+	gap: 10px;
+	padding: 1.5em 0 2em;
+}
+.maxa-christmas .footer-bottom-inner {
+	display: block;
+	text-align: center;
+	padding: 1em 0 1.5em;
+	width: 100%;
+	background-color: #775602;
+}
+.maxa-christmas .col-footer p {
+	font-size: 1.1rem;
+}
+.maxa-christmas .footer-logo-partners {
+	width: auto;
+	height: 40px;
+}
+
+.maxa-christmas .footer-partners-link {
+	display: block;
+	-webkit-transition: all 222ms ease-out;
+	-o-transition: all 222ms ease-out;
+	transition: all 222ms ease-out;
+}
+.maxa-christmas .footer-partners-link:hover {
+	-webkit-transform: scale(1.1);
+	-ms-transform: scale(1.1);
+	transform: scale(1.1);
+}
+
+/* Footer */
+.maxa-christmas .site-footer {
+	display: block;
+	padding: 3em 1em;
+	margin: 0 auto;
+	text-align: center;
+	background-color: #6000BF;
+}
+.maxa-christmas .site-footer a {
+	display: inline-block;
+}
+.maxa-christmas .footer-logo {
+	width: 150px;
+	height: auto;
+}
+.maxa-christmas .warning-img-mobile {
+	display: block;
+	height: auto;
+	width: 100%;
+	font-size: .9rem;
+	color: #ffffff;
+	text-align: center;
+	line-height: 1.1;
+}
+.maxa-christmas .warning-img-desktop {
+	display: none;
+	height: 40px;
+	width: auto;
+	font-size: .9rem;
+	color: #ffffff;
+	text-align: center;
+	line-height: 1.6;
+}
+.maxa-christmas .copyright {
+	color: #ffffff;
+	font-size: .9rem;
+	font-weight: 400;
+	text-align: center;
+}
+.maxa-christmas .bingo-preferences-center {
+	color: #ffffff;
+	font-size: 1rem;
+	font-weight: 400;
+	text-decoration: none;
+	padding: 0;
+}
+.maxa-christmas .bingo-preferences-center:hover {
+	color: #ffffff;
+	text-decoration: underline;
+}
+.maxa-christmas .site-footer .text-image-inner {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 1em 0;
+}
+.maxa-christmas .site-footer .footer-warning {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: flex-start;
+	gap: 10px;
+}
+.maxa-christmas .footer-warning img {
+	width: auto;
+	height: 30px;
+}
+.maxa-christmas .footer-warning p {
+	color: #ffffff;
+	font-size: .9rem;
+	font-weight: 400;
+	text-align: left;
+	margin: 0;
+}
+@media(min-width: 768px) {
+	.maxa-christmas h1 {
+		font-size: 3rem;
+	}
+	.maxa-christmas h2 {
+		font-size: 2rem;
+	}
+	.maxa-christmas .h2-tilte.lottery-tickets {
+		padding: 0 0 2em;
+	}
+	.maxa-christmas .title {
+		font-size: 2rem;
+	}
+	.maxa-christmas .logo-inner {
+		text-align: left;
+	}
+	.maxa-christmas .boxes {
+		flex-direction: row;
+		align-items: center;
+	}
+	.maxa-christmas .boxes.second .col1 {
+		text-align: right;
+	}
+	.maxa-christmas .boxes .col {
+		width: 50%;
+		padding: 0;
+	}
+	.maxa-christmas .boxes.first .col1 {
+		text-align: left;
+	}
+	.maxa-christmas .btn-wrapper {
+		text-align: left;
+	}
+	.maxa-christmas .under-boxes-content p {
+		font-size: 2rem;
+	}
+	.maxa-christmas .footer-top-inner {
+		flex-direction: row;
+		padding: 2em 0;
+		width: 100%;
+		gap: 0;
+	}
+}
+
+@media(min-width: 992px) {
+	.maxa-christmas .footer-logo-partners {
+		height: 45px;
+	}
+	.maxa-christmas .top-banner {
+		padding: 0 0 1em;
+	}
+	.maxa-christmas .bg-section-3 {
+		padding: 0 0 1em;
+	}
+	.maxa-christmas .bg-section-4 {
+		padding: 0 0 1em;
+	}
+}
+
+@media(min-width: 1024px) {
+	.maxa-christmas .container {
+		max-width: 950px;
+	}
+}
