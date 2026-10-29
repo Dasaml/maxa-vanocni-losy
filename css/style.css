@@ -187,6 +187,8 @@ body.maxa-christmas {
     background: linear-gradient(to bottom, transparent, #f0f4f8);
     z-index: 1;
     pointer-events: none;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
 }
 .maxa-christmas .bg-section-1 .container {
     position: relative;
