@@ -19,15 +19,29 @@
 	font-style: normal;
 	font-display: swap;
 }
+/* Keyframes pro mobil */
 @keyframes snehulak-houpani {
+  0%, 100% {
+    transform: translateX(-50%) rotate(0deg) translateY(0);
+  }
+  25% {
+    transform: translateX(-50%) rotate(-4deg) translateY(-3px);
+  }
+  75% {
+    transform: translateX(-50%) rotate(4deg) translateY(-2px);
+  }
+}
+
+/* Keyframes pro desktop */
+@keyframes snehulak-houpani-desktop {
   0%, 100% {
     transform: rotate(0deg) translateY(0);
   }
   25% {
-    transform: rotate(-4deg) translateY(-3px); /* Náklon vlevo a mírný vznos */
+    transform: rotate(-4deg) translateY(-3px);
   }
   75% {
-    transform: rotate(4deg) translateY(-2px);  /* Náklon vpravo */
+    transform: rotate(4deg) translateY(-2px);
   }
 }
 html {
@@ -59,7 +73,7 @@ body.maxa-christmas {
 	font-size: 2.4rem;
 	font-weight: 400;
 	line-height: 1.1;
-	padding: 0 10px;
+	padding: 0;
 	margin: 0;
 }
 .maxa-christmas h2 {
@@ -75,7 +89,7 @@ body.maxa-christmas {
 	text-align: center;
 }
 .maxa-christmas .h2-tilte {
-	padding: 2em 0;
+	padding: 4em 0 3em;
 }
 .maxa-christmas .h2-tilte.lottery-tickets {
 	padding: 0 0 2em;
@@ -87,16 +101,12 @@ body.maxa-christmas {
 	line-height: 1.6;
 	margin: 1em 0;
 }
-.maxa-christmas .text-smaller {
-	font-size: 1rem;
-}
 .maxa-christmas .title {
 	color: #000;
 	font-size: 1.3rem;
 	font-weight: 600;
 	line-height: 1.2;
 	text-align: left;
-	text-transform: uppercase;
 	margin: 0;
 }
 .maxa-christmas .subtitle {
@@ -106,6 +116,7 @@ body.maxa-christmas {
 	line-height: 1.4;
 	text-transform: uppercase;
 	margin: 0;
+	padding: 0 0 1em;
 }
 .maxa-christmas .bg-violet {
 	background-color: #6000bf;
@@ -150,7 +161,6 @@ body.maxa-christmas {
 	padding: 0;
 	height: auto;
 	width: 100%;
-	max-width: 400px;
 }
 .maxa-christmas .container {
 	max-width: 100%;
@@ -161,35 +171,55 @@ body.maxa-christmas {
 	text-align: center;
 }
 .maxa-christmas .bg-section-1 {
-	background-image: url("../img/sediva-bg.webp");
-	background-color: #6000bf;
+	position: relative;
+	background-image: url('../img/pozadi-section-1.png');
 	background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat;
 }
+.maxa-christmas .bg-section-1:after {
+	content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background: linear-gradient(to bottom, transparent, #f0f4f8);
+    z-index: 1;
+    pointer-events: none;
+}
+.maxa-christmas .bg-section-1 .container {
+    position: relative;
+    z-index: 2;
+}
 .maxa-christmas .bg-section-2 {
-	background-image: url("../img/sediva-bg.webp");
+	background-image: url("../img/pozadi-sekce-2.png");
 	background-color: #ffffff;
-	background-position: center;
+	background-position: bottom;
 	background-size: cover;
 	background-repeat: no-repeat;
 	padding: 0 0 2em;
 }
 .maxa-christmas .bg-section-3 {
-	background-image: url("../img/sediva-bg.webp");
+	background-color: #ffffff;
+	padding: 0 1em 1em;
+}
+.maxa-christmas .bg-section-4 {
+	background-image: url("../img/pozadi-paticka.jpg");
 	background-color: #ffffff;
 	background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat;
 	padding: 0 1em 1em;
 }
-.maxa-christmas .bg-section-4 {
-	background-image: url("../img/sediva-bg.webp");
-	background-color: #ffffff;
-	background-position: center;
-	background-size: cover;
-	background-repeat: no-repeat;
-	padding: 0 1em 1em;
+.maxa-christmas .bg-section-4 .col-1 {
+	order: 2;
+}
+.maxa-christmas .bg-section-4 .col-2 {
+	order: 1;
+}
+.maxa-christmas .bg-section-4 .col-3 {
+	order: 3;
 }
 .maxa-christmas .top-banner {
 	display: flex;
@@ -198,6 +228,24 @@ body.maxa-christmas {
 	align-items: center;
 	padding: 1em;
 }
+.maxa-christmas .top-banner .boxes-img-1 {
+	width: 100%;
+	max-width: 600px;
+	height: auto;
+}
+.maxa-christmas .bg-section-2 .boxes-img-2 {
+	width: 100%;
+	max-width: 400px;
+	height: auto;
+}
+.maxa-christmas .bg-section-3 .boxes-img-3 {
+	width: 100%;
+	max-width: 650px;
+	height: auto;
+}
+.maxa-christmas .bg-section-3 .boxes {
+	flex-direction: column-reverse;
+} 
 .maxa-christmas .top-banner-title {
 	display: flex;
 	flex-direction: column;
@@ -206,25 +254,26 @@ body.maxa-christmas {
 }
 .maxa-christmas .top-banner-title img {
 	width: 100%;
-	max-width: 600px;
+	max-width: 800px;
 	height: auto;
 }
 .maxa-christmas .bg-section-1 h2 {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    color: #fbd76e;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+	color: #fbd76e;
+	text-shadow: 0 2px 6px rgba(0, 0, 0, 1);
 	line-height: 1.1;
-	font-size: 1.4rem;
+	font-size: 1.5rem;
 }
 .maxa-christmas .bg-section-1 h2::before {
 	content: "";
 	display: inline-block;
-	width: 150px;
+	width: 160px;
 	height: 20px;
-	background-image: url(../img/title-line-gold-left.png);
+	background-image: url(../img/title-decoration-branches-left.png);
 	background-size: contain;
 	background-repeat: no-repeat;
 	background-position: center;
@@ -233,9 +282,9 @@ body.maxa-christmas {
 .maxa-christmas .bg-section-1 h2::after {
 	content: "";
 	display: inline-block;
-	width: 150px;
+	width: 160px;
 	height: 20px;
-	background-image: url(../img/title-line-gold-right.png);
+	background-image: url(../img/title-decoration-branches-right.png);
 	background-size: contain;
 	background-repeat: no-repeat;
 	background-position: center;
@@ -256,7 +305,7 @@ body.maxa-christmas {
 	display: inline-block;
 	width: 150px;
 	height: 20px;
-	background-image: url(../img/title-line-black-left.png);
+	background-image: url(../img/title-decoration-online.png);
 	background-size: contain;
 	background-repeat: no-repeat;
 	background-position: center;
@@ -269,17 +318,17 @@ body.maxa-christmas {
     align-items: center;
     gap: 10px;
 	color: #ffb233;
-	font-size: 3rem;
+	font-size: 1.4rem;
 	font-weight: 700;
-	line-height: 1.2;
+	line-height: 1.1;
 	margin: 0;
 }
 .maxa-christmas .bg-section-4 h2::before {
 	content: "";
 	display: inline-block;
-	width: 150px;
+	width: 90px;
 	height: 20px;
-	background-image: url(../img/title-line-gold-left.png);
+	background-image: url(../img/title-decoration-christmas-tickets-left.png);
 	background-size: contain;
 	background-repeat: no-repeat;
 	background-position: center;
@@ -288,9 +337,9 @@ body.maxa-christmas {
 .maxa-christmas .bg-section-4 h2::after {
 	content: "";
 	display: inline-block;
-	width: 150px;
+	width: 90px;
 	height: 20px;
-	background-image: url(../img/title-line-gold-right.png);
+	background-image: url(../img/title-decoration-christmas-tickets-right.png);
 	background-size: contain;
 	background-repeat: no-repeat;
 	background-position: center;
@@ -298,9 +347,11 @@ body.maxa-christmas {
 }
 .maxa-christmas .boxes.first {
 	padding: 0;
+	flex-direction: column-reverse;
 }
 .maxa-christmas .boxes.second {
-	padding: 3em 0 2em;
+	padding: 0 0 2em;
+	align-items: center;
 }
 .maxa-christmas .boxes {
 	display: flex;
@@ -308,6 +359,8 @@ body.maxa-christmas {
 	justify-content: space-between;
 	align-items: center;
 	gap: 10px;
+	position: relative;
+	z-index: 2;
 } 
 .maxa-christmas .boxes .col {
 	position: relative;
@@ -333,13 +386,12 @@ body.maxa-christmas {
 	cursor: pointer;
 	opacity: 1;
 	border-radius: 38px;
-	-webkit-transition: all .3s ease-in-out;
-	-o-transition: all .3s ease-in-out;
-	transition: all .3s ease-in-out;
+	transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 .maxa-christmas .btn-wrapper .christmas-button:hover {
 	background-color: #ffb233e6;
 	color: #6000bf;
+	transform: translateY(-1px);
 }
 
 .maxa-christmas .btn-wrapper .christmas-button-otherwise {
@@ -356,14 +408,13 @@ body.maxa-christmas {
 	cursor: pointer;
 	opacity: 1;
 	border-radius: 38px;
-	-webkit-transition: all .3s ease-in-out;
-	-o-transition: all .3s ease-in-out;
-	transition: all .3s ease-in-out;
+	transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
 .maxa-christmas .btn-wrapper .christmas-button-otherwise:hover {
 	background-color: #5300a5;
 	color: #ffb233;
+	transform: translateY(-1px);
 }
 .maxa-christmas .christmas-link {
 	display: block;
@@ -394,20 +445,30 @@ body.maxa-christmas {
 .maxa-christmas .boxes.second .col1 {
 	position: relative;
 }
-.maxa-christmas .boxes.second .col1:after {
+.maxa-christmas .boxes.second .snowman:after {
 	content: "";
 	display: inline-block;
-	width: 200px;
-	height: 300px;
-	background-image: url(../img/snehulak.png);
+	width: 80px;
+	height: 80px;
+	background-image: url(../img/snowman.png);
 	background-size: contain;
 	background-repeat: no-repeat;
-	background-position: bottom right;
+	background-position: bottom center;
 	position: absolute;
-	right: -170px;
-    bottom: -100px;
+	left: 50%;
+	bottom: -95px;
 	transform-origin: bottom center;
 	animation: snehulak-houpani 4s ease-in-out infinite;
+	z-index: 1;
+}
+
+.maxa-christmas .boxes.first .col1 {
+	width: 100%;
+	padding: 0 0 2em;
+}
+
+.maxa-christmas .boxes.first .col2 {
+	width: 100%;
 }
 
 .maxa-christmas .boxes .col-2 {
@@ -417,7 +478,7 @@ body.maxa-christmas {
 	align-items: center;
 }
 .maxa-christmas .under-boxes-content {
-	padding: 3em 0 0;
+	padding: 2em 0 0;
 }
 .maxa-christmas .under-boxes-content p {
 	color: #000;
@@ -556,9 +617,15 @@ body.maxa-christmas {
 		font-size: 2rem;
 	}
 	.maxa-christmas .h2-tilte.lottery-tickets {
-		padding: 0 0 2em;
+		padding: 0 0 3em;
+	}
+	.maxa-christmas .h2-tilte {
+		padding: 2em 0 3em;
 	}
 	.maxa-christmas .title {
+		font-size: 2rem;
+	}
+	.maxa-christmas .bg-section-1 h2 {
 		font-size: 2rem;
 	}
 	.maxa-christmas .logo-inner {
@@ -566,23 +633,58 @@ body.maxa-christmas {
 	}
 	.maxa-christmas .boxes {
 		flex-direction: row;
-		align-items: center;
+		align-items: flex-end;
 	}
 	.maxa-christmas .boxes.second .col1 {
 		text-align: right;
+	}
+	.maxa-christmas .boxes.second {
+		padding: 3em 0 2em;
 	}
 	.maxa-christmas .boxes .col {
 		width: 50%;
 		padding: 0;
 	}
+	.maxa-christmas .boxes.first {
+		flex-direction: row;
+	}
+	.maxa-christmas .bg-section-3 .boxes {
+		flex-direction: row;
+	} 
+	.maxa-christmas .bg-section-4 h2 {
+		font-size: 3rem;
+	}
+	.maxa-christmas .bg-section-4 h2::before {
+		width: 150px;
+	}
+	.maxa-christmas .bg-section-4 h2::after {
+		width: 150px;
+	}
+	.maxa-christmas .bg-section-4 .col-1 {
+		order: 1;
+	}
+	.maxa-christmas .bg-section-4 .col-2 {
+		order: 2;
+	}
+	.maxa-christmas .bg-section-4 .col-3 {
+		order: 3;
+	}
 	.maxa-christmas .boxes.first .col1 {
 		text-align: left;
+		width: 45%;
+		padding: 0;
+	}
+	.maxa-christmas .boxes.first .col2 {
+		width: 55%;
 	}
 	.maxa-christmas .btn-wrapper {
 		text-align: left;
 	}
 	.maxa-christmas .under-boxes-content p {
 		font-size: 2rem;
+	}
+	.maxa-christmas .under-boxes-content {
+		padding: 5em 0 0;
 	}
 	.maxa-christmas .footer-top-inner {
 		flex-direction: row;
@@ -599,8 +701,11 @@ body.maxa-christmas {
 	.maxa-christmas .top-banner {
 		padding: 0 0 1em;
 	}
+	.maxa-christmas .bg-section-2 {
+		padding: 2em 0 4em;
+	}
 	.maxa-christmas .bg-section-3 {
-		padding: 0 0 1em;
+		padding: 0 0 3em;
 	}
 	.maxa-christmas .bg-section-4 {
 		padding: 0 0 1em;
@@ -611,4 +716,37 @@ body.maxa-christmas {
 	.maxa-christmas .container {
 		max-width: 950px;
 	}
+	.maxa-christmas .boxes.second .snowman:after {
+		content: "";
+		display: inline-block;
+		width: 200px;
+		height: 200px;
+		background-image: url(../img/snowman.png);
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: bottom right;
+		position: absolute;
+		left: calc(50% + 145px);
+		bottom: -85px;
+		transform-origin: bottom center;
+		animation: snehulak-houpani-desktop 4s ease-in-out infinite;
+	}
+}
+
+@media (min-width: 768px) and (max-width: 1200px) {
+    .maxa-christmas .boxes.second .snowman:after {
+	content: "";
+	display: inline-block;
+	width: 150px;
+	height: 150px;
+	background-image: url(../img/snowman.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: bottom center;
+	position: absolute;
+	left: calc(50% + 120px);
+	bottom: -150px;
+	transform-origin: bottom center;
+	animation: snehulak-houpani 4s ease-in-out infinite;
+}
 }
