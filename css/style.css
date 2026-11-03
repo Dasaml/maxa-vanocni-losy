@@ -116,7 +116,7 @@ body.maxa-christmas {
 	line-height: 1.4;
 	text-transform: uppercase;
 	margin: 0;
-	padding: 0 0 1em;
+	padding: 0 0 1.5em;
 }
 .maxa-christmas .bg-violet {
 	background-color: #6000bf;
@@ -172,7 +172,7 @@ body.maxa-christmas {
 }
 .maxa-christmas .bg-section-1 {
 	position: relative;
-	background-image: url('../img/pozadi-section-1.png');
+	background-image: url('../img/pozadi-section-1.webp');
 	background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -197,7 +197,7 @@ body.maxa-christmas {
 	z-index: 2;
 }
 .maxa-christmas .bg-section-2 {
-	background-image: url("../img/pozadi-sekce-2.png");
+	background-image: url("../img/pozadi-sekce-2.webp");
 	background-color: #ffffff;
 	background-position: bottom;
 	background-size: cover;
@@ -209,7 +209,7 @@ body.maxa-christmas {
 	padding: 0 1em 1em;
 }
 .maxa-christmas .bg-section-4 {
-	background-image: url("../img/pozadi-paticka.jpg");
+	background-image: url("../img/pozadi-paticka.webp");
 	background-color: #ffffff;
 	background-position: center;
 	background-size: cover;
@@ -277,7 +277,7 @@ body.maxa-christmas {
 	display: inline-block;
 	width: 160px;
 	height: 20px;
-	background-image: url(../img/title-decoration-branches-left.png);
+	background-image: url(../img/title-decoration-branches-left.webp);
 	background-size: contain;
 	background-repeat: no-repeat;
 	background-position: center;
@@ -288,7 +288,7 @@ body.maxa-christmas {
 	display: inline-block;
 	width: 160px;
 	height: 20px;
-	background-image: url(../img/title-decoration-branches-right.png);
+	background-image: url(../img/title-decoration-branches-right.webp);
 	background-size: contain;
 	background-repeat: no-repeat;
 	background-position: center;
@@ -309,7 +309,7 @@ body.maxa-christmas {
 	display: inline-block;
 	width: 150px;
 	height: 20px;
-	background-image: url(../img/title-decoration-online.png);
+	background-image: url(../img/title-decoration-online.webp);
 	background-size: contain;
 	background-repeat: no-repeat;
 	background-position: center;
@@ -332,7 +332,7 @@ body.maxa-christmas {
 	display: inline-block;
 	width: 90px;
 	height: 20px;
-	background-image: url(../img/title-decoration-christmas-tickets-left.png);
+	background-image: url(../img/title-decoration-christmas-tickets-left.webp);
 	background-size: contain;
 	background-repeat: no-repeat;
 	background-position: center;
@@ -343,7 +343,7 @@ body.maxa-christmas {
 	display: inline-block;
 	width: 90px;
 	height: 20px;
-	background-image: url(../img/title-decoration-christmas-tickets-right.png);
+	background-image: url(../img/title-decoration-christmas-tickets-right.webp);
 	background-size: contain;
 	background-repeat: no-repeat;
 	background-position: center;
@@ -397,7 +397,6 @@ body.maxa-christmas {
 	color: #6000bf;
 	transform: translateY(-1px);
 }
-
 .maxa-christmas .btn-wrapper .christmas-button-otherwise {
 	display: inline-block;
 	position: relative;
@@ -414,7 +413,6 @@ body.maxa-christmas {
 	border-radius: 38px;
 	transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
-
 .maxa-christmas .btn-wrapper .christmas-button-otherwise:hover {
 	background-color: #5300a5;
 	color: #ffb233;
@@ -454,7 +452,7 @@ body.maxa-christmas {
 	display: inline-block;
 	width: 80px;
 	height: 80px;
-	background-image: url(../img/snowman.png);
+	background-image: url(../img/snowman.webp);
 	background-size: contain;
 	background-repeat: no-repeat;
 	background-position: bottom center;
@@ -465,16 +463,13 @@ body.maxa-christmas {
 	animation: snehulak-houpani 4s ease-in-out infinite;
 	z-index: 1;
 }
-
 .maxa-christmas .boxes.first .col1 {
 	width: 100%;
 	padding: 0 0 2em;
 }
-
 .maxa-christmas .boxes.first .col2 {
 	width: 100%;
 }
-
 .maxa-christmas .boxes .col-2 {
 	display: flex;
 	flex-direction: column;
@@ -525,7 +520,6 @@ body.maxa-christmas {
 	width: auto;
 	height: 40px;
 }
-
 .maxa-christmas .footer-partners-link {
 	display: block;
 	-webkit-transition: all 222ms ease-out;
@@ -720,7 +714,7 @@ body.maxa-christmas {
 		padding: 2em 0 4em;
 	}
 	.maxa-christmas .bg-section-3 {
-		padding: 0 0 3em;
+		padding: 3em 0 5em;
 	}
 	.maxa-christmas .bg-section-4 {
 		padding: 0 0 1em;
@@ -736,7 +730,7 @@ body.maxa-christmas {
 		display: inline-block;
 		width: 200px;
 		height: 200px;
-		background-image: url(../img/snowman.png);
+		background-image: url(../img/snowman.webp);
 		background-size: contain;
 		background-repeat: no-repeat;
 		background-position: bottom right;
@@ -754,7 +748,7 @@ body.maxa-christmas {
 		display: inline-block;
 		width: 150px;
 		height: 150px;
-		background-image: url(../img/snowman.png);
+		background-image: url(../img/snowman.webp);
 		background-size: contain;
 		background-repeat: no-repeat;
 		background-position: bottom center;
