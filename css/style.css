@@ -206,7 +206,7 @@ body.maxa-christmas {
 }
 .maxa-christmas .bg-section-3 {
 	background-color: #ffffff;
-	padding: 0 1em 1em;
+	padding: 0 1em 3em;
 }
 .maxa-christmas .bg-section-4 {
 	background-image: url("../img/pozadi-paticka.webp");
@@ -498,12 +498,11 @@ body.maxa-christmas {
 	line-height: 1.1;
 }
 .maxa-christmas .footer-top-inner {
-	display: flex;
-	flex-direction: column;
-	justify-content: space-around;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 10px;
 	align-items: center;
 	width: auto;
-	gap: 10px;
 	padding: 1.5em 0 2em;
 }
 .maxa-christmas .footer-bottom-inner {
@@ -525,6 +524,7 @@ body.maxa-christmas {
 	-webkit-transition: all 222ms ease-out;
 	-o-transition: all 222ms ease-out;
 	transition: all 222ms ease-out;
+	text-align: center;
 }
 .maxa-christmas .footer-partners-link:hover {
 	-webkit-transform: scale(1.1);
@@ -606,6 +606,12 @@ body.maxa-christmas {
 	font-weight: 400;
 	text-align: left;
 	margin: 0;
+}
+@media(min-width: 425px) {
+	.maxa-christmas .footer-top-inner {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+	}
 }
 @media(min-width: 768px) {
 	.maxa-christmas h1 {
@@ -696,10 +702,8 @@ body.maxa-christmas {
 		padding: 5em 0 0;
 	}
 	.maxa-christmas .footer-top-inner {
-		flex-direction: row;
-		padding: 2em 0;
-		width: 100%;
-		gap: 0;
+		display: grid;
+		grid-template-columns: repeat(6, 1fr);
 	}
 }
 
@@ -714,10 +718,10 @@ body.maxa-christmas {
 		padding: 2em 0 4em;
 	}
 	.maxa-christmas .bg-section-3 {
-		padding: 3em 0 5em;
+		padding: 2em 0 3em;
 	}
 	.maxa-christmas .bg-section-4 {
-		padding: 0 0 1em;
+		padding: 0 0 2em;
 	}
 }
 
